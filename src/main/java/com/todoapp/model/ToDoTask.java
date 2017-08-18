@@ -1,4 +1,4 @@
-package com.todo.model;
+package com.todoapp.model;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -9,9 +9,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
-
-import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
 @Table (name="to_do_list")
@@ -24,7 +21,7 @@ public class ToDoTask implements Serializable
     @Column(name="t_id")
     private Integer id;
 	
-	@NotEmpty
+	
 	@Column(name="to_do_task")
 	private String toDoTask;
 	@Column(name="status")
@@ -32,7 +29,7 @@ public class ToDoTask implements Serializable
 	@Column(name="date_created")
 	private Date createdDate;
 	
-	@NotNull
+	
 	@ManyToOne
 	private User user;
 	
